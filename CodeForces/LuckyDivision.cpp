@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NearlyLuckyNumber.cpp                              :+:      :+:    :+:   */
+/*   LuckyDivision.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 17:14:13 by acmaghou          #+#    #+#             */
-/*   Updated: 2023/02/02 12:08:14 by acmaghou         ###   ########.fr       */
+/*   Created: 2023/02/02 12:07:21 by acmaghou          #+#    #+#             */
+/*   Updated: 2023/02/02 12:07:40 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <vector>
-#include <cstring>
-#include <sstream>
-#include <algorithm>
 #include <iostream>
- 
-int	main() {
-	long long	n;
+
+int main ()
+{
+	int n ;
 	std::cin >> n;
-	std::stringstream	ss;
-	ss << n;
-	std::string	s;
-	ss >> s;
-	std::string::difference_type	count_4 = std::count(s.begin(), s.end(), '4');
-	std::string::difference_type	count_7 = std::count(s.begin(), s.end(), '7');
-	if (count_4 + count_7  == 4 || count_4 + count_7 == 7)
-		std::cout << "YES";
+	if(n%4==0 || n%7==0 || n%44==0|| n%47==0 || n%74==0 ||n%77==0 
+		|| n%444==0 || n%447==0 || n%474==0 || n%744==0 || n%477==0 || n%747==0 || n%774==0 || n%777==0 )
+		std::cout<<"YES";
 	else
-		std::cout << "NO";
- 
+		std::cout<<"NO";
+	return 0;
 }
