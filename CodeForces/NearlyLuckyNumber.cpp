@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   NearlyLuckyNumber.cpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achraf <achraf@student.42.fr>              +#+  +:+       +#+        */
+/*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:14:13 by acmaghou          #+#    #+#             */
-/*   Updated: 2023/02/01 23:42:43 by achraf           ###   ########.fr       */
+/*   Updated: 2023/03/17 19:11:23 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <sstream>
 #include <algorithm>
 #include <iostream>
-
+ 
 int	main() {
 	long long	n;
 	std::cin >> n;
@@ -29,5 +29,5 @@ int	main() {
 		std::cout << "YES";
 	else
 		std::cout << "NO";
-
+ 
 }
