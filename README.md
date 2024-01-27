@@ -1,2 +1,3 @@
 # ProblemSolving
-solving 4 problems a day
+
+The problems i have solved on different platforms
