@@ -31,7 +31,9 @@ class Solution
 			// O(n)
 			int maxSub = 0, sum = 0;
 			for (int i = 0; i < nums.size(); i++) {
+				cout << "sum before the comparison: " << sum << "\n";
 				sum = max(nums[i], sum + nums[i]);
+				cout << "sum after the comparison: " << sum << "\n";
 				maxSub = max(maxSub, sum);
 			}
 			return maxSub;

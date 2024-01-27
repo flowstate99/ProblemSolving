@@ -6,19 +6,15 @@ class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
 			int zeros = 0;
-			for (vector<int>::iterator it = nums.begin(); it != nums.end(); ++it)
-			{
-				cout << *it << endl;
-				if (*it == 0)
-				{
-					nums.erase(it);
-					free(*it);
-					zeros++;
+			int i = 0;
+			for (int j = 0; j < nums.size(); j++) {
+				if (nums[j] != 0) {
+					nums[i] = nums[j];
+					i++;
 				}
 			}
-			while (zeros > 0) {
-				nums.push_back(0);
-			}
+			for (int k = i; k < nums.size(); k++)
+				nums[k] = 0;
 		}
 };
 
