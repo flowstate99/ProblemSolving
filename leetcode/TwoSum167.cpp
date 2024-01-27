@@ -8,12 +8,11 @@ class Solution {
 	public:
 		vector<int> twoSum(vector<int>& numbers, int target) {
 			vector<int> res;
-			int i = 0, j = 1;
-			for (; i < numbers.size() - 1; ++i) {
-				for (; j < numbers.size(); ++j) {
+			for (int i = 0; i < numbers.size() - 1; ++i) {
+				for (int j = i + 1; j < numbers.size(); ++j) {
 					if (numbers[i] + numbers[j] == target) {
-						res.push_back(i + 1);
-						res.push_back(j + 1);
+						res.push_back(i);
+						res.push_back(j);
 						return res;
 					}
 				}
@@ -23,16 +22,11 @@ class Solution {
 
 int	main() {
 	Solution	sol;
-
-
-	vector<int> nums = {0,0,3,4};
-
-	vector<int>	res = sol.twoSum(nums, 0);
-	vector<int>::iterator	it = res.begin();
-	for (; it != res.end(); ++it){
-		if (it != nums.end() - 1)
-			cout << *it << ",";
-		else
-			cout << *it;
-	}
+	int myarray[] = {1, 2, 3, 4};
+	vector<int> nums(myarray, myarray + sizeof(myarray) / sizeof(int));
+	vector<int>	res = sol.twoSum(nums, 5);
+	vector<int>::iterator it = res.begin();
+	for (; it != res.end(); it++)
+		cout << *it << ' ';
+	return 0;
 }
