@@ -1,4 +1,3 @@
-from typing import *
 from typing import List
 
 class Solution:
@@ -11,10 +10,13 @@ class Solution:
 			player = A if i % 2 == 0 else B
 			player[r] += 1
 			player[c + 3] += 1
+			# check for top left to bottom right diagonal
 			if r == c:
 				player[6] += 1
+			# check for top right to bottem left diagonal
 			if r == 2-c:
 				player[7] += 1
+			print(player)
 		for i in range(8):
 			if A[i] == 3:
 				return "A"
